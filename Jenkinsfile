@@ -3,7 +3,7 @@ pipeline {
     stages {      
         stage('CI') {
             parallel {
-                stage {
+                stage('project 1') {
                     stages {
                         stage('Test') {
                             steps {
@@ -32,7 +32,7 @@ pipeline {
                         }   
                     }
                 }
-                stage {
+                stage('project 2') {
                     stages {
                         stage('Test') {
                             steps {
