@@ -3,7 +3,7 @@ pipeline {
     stages {      
         stage('CI') {
             parallel {
-                
+                stage {
                     stages {
                         stage('Test') {
                             steps {
@@ -31,7 +31,8 @@ pipeline {
                             }
                         }   
                     }
-                
+                }
+                stage {
                     stages {
                         stage('Test') {
                             steps {
@@ -59,7 +60,7 @@ pipeline {
                             }
                         }   
                     }
-                
+                }
             }
         }
     }
