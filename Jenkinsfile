@@ -2,21 +2,10 @@ pipeline {
     agent any
     stages {
         parallel {
-            stages {
-            
+                        
                 stage('Test') {
-
-                    parallel {
-                        stage('Performance test') {
-                            steps { 
-                                echo "Perfrmance test"
-                            }
-                        }
-                        stage('Smoke test') {
-                            steps { 
-                                echo "Smoke test"
-                            }
-                        }
+                    steps {
+                        echo "Build"
                     }
                 }
                 stage('Build') {
@@ -40,6 +29,6 @@ pipeline {
                     }
                 }   
             }
-        }
+        
     }
 }
